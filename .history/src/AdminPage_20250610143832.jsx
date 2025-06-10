@@ -24,7 +24,7 @@ const AdminPage = () => {
     <div className="admin-page">
       <h1>Admin Dashboard</h1>
       <input type='text' placeholder='Username' className='form-input' value={username} onChange={(e)=> setUsername(e.target.value)} required/>
-      <input type='password' placeholder='Password'  className='form-input'  value={password} onChange={(e)=> setPassword(e.target.value)}required/>
+      <input type='password' placeholder='Password'  className='form-input' required/>
       <div className="form-button">
         <button type="submit" >Create My Account</button>
       </div>

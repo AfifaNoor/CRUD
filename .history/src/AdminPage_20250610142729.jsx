@@ -2,8 +2,6 @@ import React from 'react';
 import './AdminPage.css';
 
 const AdminPage = () => {
-  const [username, setUsername] = useState('');
-  const [password, setPassword] = useState('');
 
   const handleSubmit =((e)=>{
     e.preventDefault();
@@ -23,10 +21,10 @@ const AdminPage = () => {
   return (
     <div className="admin-page">
       <h1>Admin Dashboard</h1>
-      <input type='text' placeholder='Username' className='form-input' value={username} onChange={(e)=> setUsername(e.target.value)} required/>
-      <input type='password' placeholder='Password'  className='form-input'  value={password} onChange={(e)=> setPassword(e.target.value)}required/>
+      <input type='text' placeholder='Username' className='form-input' required/>
+      <input type='password' placeholder='Password'  className='form-input' required/>
       <div className="form-button">
-        <button type="submit" >Create My Account</button>
+        <button type="submit" {(e) => setUsername(e.target.value)} >Create My Account</button>
       </div>
     </div>
   );
