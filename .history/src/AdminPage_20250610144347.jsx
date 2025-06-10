@@ -24,14 +24,12 @@ const AdminPage = () => {
   return (
     <div className="admin-page">
       <h1>Admin Dashboard</h1>
-      <form onSubmit={handleSubmit}>
-        <input type='text' placeholder='Username' className='form-input' value={username} onChange={(e)=> setUsername(e.target.value)} required/>
+      <form onSubmit={handleSubmit}
+      <input type='text' placeholder='Username' className='form-input' value={username} onChange={(e)=> setUsername(e.target.value)} required/>
       <input type='password' placeholder='Password'  className='form-input'  value={password} onChange={(e)=> setPassword(e.target.value)}required/>
       <div className="form-button">
-        <button type="submit" >Login</button>
+        <button type="submit" >Create My Account</button>
       </div>
-      </form>
-      
     </div>
   );
 };
