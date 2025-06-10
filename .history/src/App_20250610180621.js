@@ -1,10 +1,9 @@
 import AdminPage from "./AdminPage"
-import Router from "./Router";
 function App() {
   return (
     <>
       <AdminPage/>
-      <RouterProvider router={Router} />
+      <RouterProvider router={router} />
     </>
   );
 }
