@@ -1,6 +1,5 @@
 import React from 'react';
 import './AdminPage.css';
-import { useState } from 'react';
 
 const AdminPage = () => {
   const [username, setUsername] = useState('');
