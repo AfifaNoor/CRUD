@@ -6,6 +6,7 @@ import { useNavigate } from 'react-router-dom';
 const Dashboard = () => {
   const navigate = useNavigate()
   const handleAddEmployee = () => {
+    alert("Add Employee button clicked");
     navigate('/add-employee');
     
   };
