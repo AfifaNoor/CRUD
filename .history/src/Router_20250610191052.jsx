@@ -7,8 +7,10 @@ import AdminPage from './AdminPage'
 const Router =createBrowserRouter ( 
     createRoutesFromElements(
         <>
+        <Route>
             <Route path="/dashboard" element= {<Dashboard/>}/>
-            <Route path="/" element={<AdminPage/>} />
+            <Route path="/adminpage" element={<AdminPage/>} />
+        </Route>
             
         </>
 

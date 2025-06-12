@@ -6,7 +6,6 @@ import { useNavigate } from 'react-router-dom';
 const AdminPage = () => {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
-  const navigate = useNavigate();
 
   const handleSubmit =((e)=>{
     e.preventDefault();
@@ -16,11 +15,13 @@ const AdminPage = () => {
 
    if ( username=== hardcodedUsername && password === hardcodedPassword){
     alert("login successfull")
-    navigate('/dashboard');
    }else{
     alert ("invalid credential")
    }
   })
+
+
+  
   return (
     <div className="admin-page">
       <h1>Admin Dashboard</h1>

@@ -16,11 +16,13 @@ const AdminPage = () => {
 
    if ( username=== hardcodedUsername && password === hardcodedPassword){
     alert("login successfull")
-    navigate('/dashboard');
    }else{
     alert ("invalid credential")
    }
   })
+
+
+  
   return (
     <div className="admin-page">
       <h1>Admin Dashboard</h1>

@@ -21,6 +21,9 @@ const AdminPage = () => {
     alert ("invalid credential")
    }
   })
+
+
+  
   return (
     <div className="admin-page">
       <h1>Admin Dashboard</h1>
