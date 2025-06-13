@@ -23,19 +23,7 @@ const [employeeList, setEmployeeList] = useState([]);
 
   const handleSubmit = (e) =>{
     e.preventDefault();
-    // console.log('Submitted:', { name, email });
-      const newEmployee = {
-      name: name.trim(),
-      email: email.trim()
-    };
-
-    const updatedList = [...employeeList, newEmployee];
-
-    // Save updated list in state and localStorage
-    setEmployeeList(updatedList);
-    localStorage.setItem('employeeList', JSON.stringify(updatedList));
-
-    console.log('Employee Added:', newEmployee);
+    console.log('Submitted:', { name, email });
     
 
   }

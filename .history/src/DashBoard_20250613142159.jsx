@@ -1,5 +1,4 @@
 import { useNavigate } from 'react-router-dom';
-import { useState,useEffect } from 'react';
 
 
 const Dashboard = () => {
@@ -8,7 +7,6 @@ const Dashboard = () => {
     navigate('/add-employee');
     
   };
-  const [employees, setEmployees] = useState([]);
   // const newArray = [
   //   { name: 'Afifa Noor', email: 'afifanoor1011@gmail.com' },
   //   { name: 'John Doe', email: 'johndoe@example.com' } 
@@ -24,7 +22,7 @@ const Dashboard = () => {
     <div className="dashboard-page">
       <h2>Employee Management Software</h2>
        <div className='employee-detail'>
-        {employees.map(( value)=>{
+        {newArray.map(( value)=>{
           return (<>
             <p>{value.name}</p>
                   <p>{value.email}</p>

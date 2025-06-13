@@ -12,30 +12,14 @@ const AddEmployee = () => {
 //   });9
 const [name,setName] =useState()
 const[email,setEmail]= useState()
-const [employeeList, setEmployeeList] = useState([]);
 
-  useEffect(() => {
-    // Load existing data from localStorage (if any) when the component mounts
-    const storedData = JSON.parse(localStorage.getItem('employeeList')) || [];
-    setEmployeeList(storedData);
-  }, []);
-
-
+useEffect(()=>{
+   console.log("useeffect is running") 
+   localStorage.setItem("king",name)
+})
   const handleSubmit = (e) =>{
     e.preventDefault();
-    // console.log('Submitted:', { name, email });
-      const newEmployee = {
-      name: name.trim(),
-      email: email.trim()
-    };
-
-    const updatedList = [...employeeList, newEmployee];
-
-    // Save updated list in state and localStorage
-    setEmployeeList(updatedList);
-    localStorage.setItem('employeeList', JSON.stringify(updatedList));
-
-    console.log('Employee Added:', newEmployee);
+    console.log('Submitted:', { name, email });
     
 
   }

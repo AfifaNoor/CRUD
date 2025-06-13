@@ -24,10 +24,6 @@ const [employeeList, setEmployeeList] = useState([]);
   const handleSubmit = (e) =>{
     e.preventDefault();
     // console.log('Submitted:', { name, email });
-      const newEmployee = {
-      name: name.trim(),
-      email: email.trim()
-    };
 
     const updatedList = [...employeeList, newEmployee];
 
