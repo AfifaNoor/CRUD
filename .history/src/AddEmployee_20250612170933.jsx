@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React from 'react'
 import { useState } from 'react';
 
 const AddEmployee = () => {
@@ -11,20 +11,16 @@ const AddEmployee = () => {
 //     gender: '',
 //   });9
 const [name,setName] =useState()
+console.log(name)
 const[email,setEmail]= useState()
 
-useEffect(()=>{
-   console.log("useeffect is running") 
-   localStorage.setItem("king",name,email)
-})
+
+
   const handleSubmit = (e) =>{
     e.preventDefault();
-    console.log('Submitted:', { name, email });
     
 
   }
-
-
 
  
 
@@ -33,7 +29,7 @@ useEffect(()=>{
   return (
     <div className='add-employee-page'>
       <h2>Add Employee</h2>
-        <input type='text' name= "name" placeholder='Employee Name' value={name} className='form-input' onChange={(e) => setName(e.target.value)} />
+        <input type='text' name= "name" placeholder='Employee Name' value={name} className='form-input' onChange={(e)=> setName(e.target.value)} />
         {/* <div className='dropdown' >
           <select className='form-input' value={formData.gender}  onChange={handleChange} name='gender' required>
             <option value="" disabled selected>Select Gender</option>
@@ -43,13 +39,13 @@ useEffect(()=>{
             <option value="prefer not to say">Prefer not to say</option>
           </select>   
         </div> */}
-        <input type='email' placeholder='Employee Email'  name="email" value={email} className='form-input' onChange={(e) => setEmail(e.target.value)}  required />
+        <input type='email' placeholder='Employee Email'  name="email" value={email} className='form-input' onChange={handleChange}  required />
         {/* <input type='text' placeholder='Employee Position' value={formData.position} className='form-input' onChange={handleChange}  required />
         <input type='number' placeholder='Employee Salary'  value ={ formData.salary} className='form-input' onChange={handleChange}  required />
         <input type='date' placeholder='Date of Joining'  value={formData.joiningDate} className='form-input'  onChange={handleChange}required /> */}
         
         <div className="form-button">
-          <button type="submit" onClick={handleSubmit}  >Add Employee</button>
+          <button type="submit"  >Add Employee</button>
         </div>
       
     </div>

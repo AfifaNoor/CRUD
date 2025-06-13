@@ -15,8 +15,30 @@ const[email,setEmail]= useState()
 
 useEffect(()=>{
    console.log("useeffect is running") 
-   localStorage.setItem("king",name,email)
 })
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   const handleSubmit = (e) =>{
     e.preventDefault();
     console.log('Submitted:', { name, email });

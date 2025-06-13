@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React from 'react'
 import { useState } from 'react';
 
 const AddEmployee = () => {
@@ -13,10 +13,9 @@ const AddEmployee = () => {
 const [name,setName] =useState()
 const[email,setEmail]= useState()
 
-useEffect(()=>{
-   console.log("useeffect is running") 
-   localStorage.setItem("king",name,email)
-})
+
+
+
   const handleSubmit = (e) =>{
     e.preventDefault();
     console.log('Submitted:', { name, email });
@@ -43,7 +42,7 @@ useEffect(()=>{
             <option value="prefer not to say">Prefer not to say</option>
           </select>   
         </div> */}
-        <input type='email' placeholder='Employee Email'  name="email" value={email} className='form-input' onChange={(e) => setEmail(e.target.value)}  required />
+        <input type='email' placeholder='Employee Email'  name="email" value={email} className='form-input' onChange={handleChange}  required />
         {/* <input type='text' placeholder='Employee Position' value={formData.position} className='form-input' onChange={handleChange}  required />
         <input type='number' placeholder='Employee Salary'  value ={ formData.salary} className='form-input' onChange={handleChange}  required />
         <input type='date' placeholder='Date of Joining'  value={formData.joiningDate} className='form-input'  onChange={handleChange}required /> */}

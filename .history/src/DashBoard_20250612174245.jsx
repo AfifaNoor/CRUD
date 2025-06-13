@@ -18,14 +18,11 @@ const Dashboard = () => {
     <div className="dashboard-page">
       <h2>Employee Management Software</h2>
        <div className='employee-detail'>
-  
+       
         {newArray.map(( value)=>{
-          return (<>
-            <p>{value.name}</p>
-                  <p>{value.email}</p>
-          </>
-                  )
-            
+          return (<p>{value.name}</p>)
+           
+           
         })}
       </div>
       <div className='add-employee-btn'>

@@ -22,11 +22,11 @@ const AddEmployee = () => {
     console.log(e.target.name)
     const name = e.target.name
     const value = e.target.value
-    const email = e.target.email
-    const emailValue=e.target.emailValue
+    const email= e.target.email
+    const position=e.target.position
     setFormData({[name]:value});
-    setFormData({[email]:emailValue});
     // console.log(name , value)
+    setFormData({[email] : value})
 
 
   }
@@ -38,7 +38,7 @@ const AddEmployee = () => {
       <h2>Add Employee</h2>
       <form onSubmit={handleSubmit}>
         <input type='text' placeholder='Employee Name' value={formData.name} className='form-input' onChange={handleChange}  required />
-        {/* <div className='dropdown' >
+        <div className='dropdown' >
           <select className='form-input' value={formData.gender}  onChange={handleChange} required>
             <option value="" disabled selected>Select Gender</option>
             <option value="male">Male</option>
@@ -46,12 +46,12 @@ const AddEmployee = () => {
             <option value="other">Other</option>
             <option value="prefer not to say">Prefer not to say</option>
           </select>   
-        </div> */}
+        </div>
         <input type='email' placeholder='Employee Email' value={formData.email} className='form-input' onChange={handleChange}  required />
-        {/* <input type='text' placeholder='Employee Position' value={formData.position} className='form-input' onChange={handleChange}  required />
+        <input type='text' placeholder='Employee Position' value={formData.position} className='form-input' onChange={handleChange}  required />
         <input type='number' placeholder='Employee Salary'  value ={ formData.salary} className='form-input' onChange={handleChange}  required />
         <input type='date' placeholder='Date of Joining'  value={formData.joiningDate} className='form-input'  onChange={handleChange}required />
-         */}
+        
         <div className="form-button">
           <button type="submit" >Add Employee</button>
         </div>

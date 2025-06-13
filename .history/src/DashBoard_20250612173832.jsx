@@ -17,21 +17,16 @@ const Dashboard = () => {
   return (
     <div className="dashboard-page">
       <h2>Employee Management Software</h2>
-       <div className='employee-detail'>
-  
-        {newArray.map(( value)=>{
-          return (<>
-            <p>{value.name}</p>
-                  <p>{value.email}</p>
-          </>
-                  )
-            
-        })}
-      </div>
       <div className='add-employee-btn'>
         <button className='add-employee' onClick={handleAddEmployee}>Add Employee</button>
       </div>
-     
+      <div className='employee-detail'>
+       
+        {newArray.map((index)=>{
+           <p>{index} hhh</p>
+           
+        })}
+      </div>
       
     </div>
   );
