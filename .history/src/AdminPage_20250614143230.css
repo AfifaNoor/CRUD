@@ -1,0 +1,62 @@
+/* AdminPage.css */
+
+.admin-page {
+  min-height: 100vh;
+  background: linear-gradient(to right, #6a11cb, #2575fc);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.admin-page h1 {
+  color: #fff;
+  margin-bottom: 30px;
+  font-size: 32px;
+  font-weight: 600;
+}
+
+form {
+  background-color: #ffffff;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+  width: 100%;
+  max-width: 400px;
+}
+
+.form-input {
+  width: 100%;
+  padding: 12px 15px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 15px;
+  transition: border 0.3s ease;
+}
+
+.form-input:focus {
+  border: 1px solid #2575fc;
+  outline: none;
+}
+
+.form-button {
+  text-align: center;
+}
+
+.form-button button {
+  background-color: #2575fc;
+  color: white;
+  border: none;
+  padding: 12px 25px;
+  font-size: 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.form-button button:hover {
+  background-color: #1b5edc;
+}

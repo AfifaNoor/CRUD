@@ -1,10 +1,9 @@
 // Importing necessary hooks from React and React Router
 import { useNavigate } from 'react-router-dom';
 import { useState, useEffect } from 'react';
-import './DashBoard.css';
-
 
 const Dashboard = () => {
+  // useNavigate hook to programmatically navigate to another route
   const navigate = useNavigate();
 
   // useState to hold the list of employee objects (fetched from localStorage)

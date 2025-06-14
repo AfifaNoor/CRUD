@@ -5,6 +5,7 @@ import './DashBoard.css';
 
 
 const Dashboard = () => {
+  // useNavigate hook to programmatically navigate to another route
   const navigate = useNavigate();
 
   // useState to hold the list of employee objects (fetched from localStorage)

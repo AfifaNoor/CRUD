@@ -1,0 +1,50 @@
+/* AddEmployee.css */
+
+.add-employee-page {
+  padding: 30px;
+  max-width: 600px;
+  margin: auto;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+h2 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 30px;
+}
+
+.form-input,
+select {
+  width: 100%;
+  padding: 12px 15px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 14px;
+  transition: border-color 0.3s ease;
+}
+
+.form-input:focus,
+select:focus {
+  border-color: #4a90e2;
+  outline: none;
+}
+
+.form-button {
+  text-align: center;
+}
+
+.form-button button {
+  background-color: #4a90e2;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  font-size: 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.form-button button:hover {
+  background-color: #357ab8;
+}
