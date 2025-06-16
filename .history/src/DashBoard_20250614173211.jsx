@@ -28,10 +28,6 @@
     return (
       <div className="dashboard-page">
         <h2>Employee Management Software</h2>
-        {/* Button to navigate to the Add Employee form */}
-        <div className='add-employee-btn'>
-          <button className='add-employee' onClick={handleAddEmployee}>Add Employee</button>
-        </div>
 
         {/* If there are no employees, show a message */}
         {employees.length === 0 ? (
@@ -52,6 +48,10 @@
           </div>
         )}
 
+        {/* Button to navigate to the Add Employee form */}
+        <div className='add-employee-btn'>
+          <button className='add-employee' onClick={handleAddEmployee}>Add Employee</button>
+        </div>
       </div>
     );
   };

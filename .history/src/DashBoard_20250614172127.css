@@ -1,0 +1,81 @@
+/* Dashboard.css (Modern Dark Theme) */
+
+body {
+  background-color: #0d0d11;
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #f0f0f5;
+}
+
+/* Main container */
+.dashboard-page {
+  max-width: 1200px;
+  margin: 50px auto;
+  padding: 40px;
+  background: #13131a;
+  border-radius: 16px;
+  box-shadow: 0 0 20px rgba(72, 61, 139, 0.2);
+}
+
+/* Title */
+h2 {
+  font-size: 28px;
+  color: #ffffff;
+  text-align: center;
+  margin-bottom: 30px;
+  font-weight: 600;
+}
+
+/* Employee Grid */
+.employee-detail {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 24px;
+  margin-bottom: 40px;
+}
+
+/* Employee Card */
+.employee-card {
+  background: #1b1b24;
+  border-left: 5px solid #6c63ff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(108, 99, 255, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.employee-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 18px rgba(108, 99, 255, 0.3);
+}
+
+.employee-card p {
+  margin: 8px 0;
+  font-size: 15px;
+  color: #e0e0e0;
+}
+
+/* Add Employee Button Container */
+.add-employee-btn {
+  display: flex;
+  justify-content: center;
+}
+
+/* Add Employee Button */
+.add-employee {
+  background: linear-gradient(to right, #6c63ff, #5a52d4);
+  color: #ffffff;
+  border: none;
+  padding: 12px 36px;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(108, 99, 255, 0.4);
+}
+
+.add-employee:hover {
+  background: linear-gradient(to right, #5a52d4, #483cc0);
+  transform: translateY(-2px);
+}
