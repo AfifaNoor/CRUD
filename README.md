@@ -57,7 +57,8 @@ crud/
 ## 🛠 How to Run Locally
 
 ```bash
-git clone https://github.com/your-username/crud.git
+git clone https://github.com/your-username/CRUD---Employee-Management-System-React-.git
+
 cd crud
 npm install
 npm start
