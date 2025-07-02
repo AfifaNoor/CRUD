@@ -34,9 +34,7 @@ const AddEmployee = () => {
       gender,
       position,
       salary,
-      joiningDate,
-      employeeId
-
+      joiningDate
     };
 
     // Combine old employee list with new one
@@ -58,7 +56,6 @@ const AddEmployee = () => {
     setPosition('');
     setSalary('');
     setJoiningDate('');
-    setemployeeId('');
   };
 
   // JSX: What this component renders to the browser
@@ -70,9 +67,9 @@ const AddEmployee = () => {
         type='number'
         name="ID"
         placeholder='Employee ID'
-        value={employeeId}
+        value={}
         className='form-input'
-        onChange={(e) =>setemployeeId (e.target.value)} // Updates name id as user types
+        onChange={(e) => (e.target.value)} // Updates name id as user types
       />
 
       {/* Input for Name */}

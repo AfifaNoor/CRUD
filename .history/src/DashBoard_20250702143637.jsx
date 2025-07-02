@@ -26,22 +26,12 @@
       navigate('/add-employee');
     };
 
-    // Handle Delete Employee by employeeId
-    const handleDeleteEmployee = (employeeId) => {
-    console.log("Deleting employee with ID:", employeeId); // Confirm selected ID in console
-
-    // Filter out the employee to be deleted
-    const updatedEmployees = employees.filter(emp => emp.employeeId !== employeeId);
-
-    // Update state and local storage
-    setEmployees(updatedEmployees);
-    localStorage.setItem('employeeList', JSON.stringify(updatedEmployees));
-  };
-
-    const handleViewEmployee=(employee)=>{
-      console.log("employee",employee)
+    const handleDeleteEmployee =(employeeId)=>{
+      // console.log("delete", employeeId)
+      
 
     }
+
 
 
     return (
@@ -68,7 +58,7 @@
                 <p><strong>Salary:</strong> ₹{value.salary}</p>
                 <p><strong>Joining Date:</strong> {value.joiningDate}</p>
                 <div>
-                <button onClick={()=>{handleViewEmployee(employees)}} > View</button>
+                <button > View</button>
                 <button onClick={()=>handleDeleteEmployee(value.employeeId)}> Delete </button>
               
               </div>

@@ -58,7 +58,7 @@ const AddEmployee = () => {
     setPosition('');
     setSalary('');
     setJoiningDate('');
-    setemployeeId('');
+    employeeId('');
   };
 
   // JSX: What this component renders to the browser

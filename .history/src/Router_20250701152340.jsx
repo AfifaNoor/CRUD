@@ -12,7 +12,6 @@ const Router =createBrowserRouter (
             <Route path="/dashboard" element= {<Dashboard/>}/>
             <Route path="/" element={<AdminPage/>} />
             <Route path='/add-employee' element={<AddEmployee/>} />
-             {/* ✅ Dynamic route for viewing employee detail by index */}
             <Route path='/employee-detail/:id' element={<EmployeeDetail/>}/>
             
         </>

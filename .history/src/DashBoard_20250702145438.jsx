@@ -26,17 +26,12 @@
       navigate('/add-employee');
     };
 
-    // Handle Delete Employee by employeeId
-    const handleDeleteEmployee = (employeeId) => {
-    console.log("Deleting employee with ID:", employeeId); // Confirm selected ID in console
+    const handleDeleteEmployee =(employeeId)=>{
+      console.log("delete", employees)
+      const deleteEmployee=employees.filter(emp=>)
 
-    // Filter out the employee to be deleted
-    const updatedEmployees = employees.filter(emp => emp.employeeId !== employeeId);
 
-    // Update state and local storage
-    setEmployees(updatedEmployees);
-    localStorage.setItem('employeeList', JSON.stringify(updatedEmployees));
-  };
+    }
 
     const handleViewEmployee=(employee)=>{
       console.log("employee",employee)

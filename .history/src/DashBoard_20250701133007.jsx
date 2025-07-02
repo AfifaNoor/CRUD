@@ -2,7 +2,6 @@
   import { useNavigate } from 'react-router-dom';
   import { useState, useEffect } from 'react';
   import './DashBoard.css';
-  import AddEmployee from './AddEmployee';
 
 
   const Dashboard = () => {
@@ -24,25 +23,27 @@
     const handleAddEmployee = () => {
       // Navigate to the "Add Employee" page
       navigate('/add-employee');
-    };
 
-    // Handle Delete Employee by employeeId
-    const handleDeleteEmployee = (employeeId) => {
-    console.log("Deleting employee with ID:", employeeId); // Confirm selected ID in console
+    const handleViewEmployee = (index) => {
+    const employee = employees[index];
+    alert(`
+      Name: ${employee.name}
+      Email: ${employee.email}
+      Gender: ${employee.gender}
+      Position: ${employee.position}
+      Salary: ₹${employee.salary}
+      Joining Date: ${employee.joiningDate}
+    `);
+  };
 
-    // Filter out the employee to be deleted
-    const updatedEmployees = employees.filter(emp => emp.employeeId !== employeeId);
-
-    // Update state and local storage
+  // Delete employee
+  const handleDeleteEmployee = (index) => {
+    const updatedEmployees = employees.filter((_, i) => i !== index);
     setEmployees(updatedEmployees);
     localStorage.setItem('employeeList', JSON.stringify(updatedEmployees));
   };
 
-    const handleViewEmployee=(employee)=>{
-      console.log("employee",employee)
-
-    }
-
+    };
 
     return (
       <div className="dashboard-page">
@@ -60,18 +61,16 @@
             {/* Loop through the employee list and display each employee’s info */}
             {employees.map((value, index) => (
               <div key={index} className="employee-card">
-                <p><strong>EmployeeId:</strong> {value.employeeId}</p>
                 <p><strong>Name:</strong> {value.name}</p>
                 <p><strong>Email:</strong> {value.email}</p>
                 <p><strong>Gender:</strong> {value.gender}</p>
                 <p><strong>Position:</strong> {value.position}</p>
                 <p><strong>Salary:</strong> ₹{value.salary}</p>
                 <p><strong>Joining Date:</strong> {value.joiningDate}</p>
-                <div>
-                <button onClick={()=>{handleViewEmployee(employees)}} > View</button>
-                <button onClick={()=>handleDeleteEmployee(value.employeeId)}> Delete </button>
-              
-              </div>
+                 <div className="employee-actions">
+                 <button onClick={() => handleViewEmployee(index)}>View</button>
+                 <button onClick={() => handleDeleteEmployee(index)}>Delete</button>
+                </div>
               </div>
             ))}
           </div>

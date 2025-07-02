@@ -27,7 +27,7 @@
     };
 
     // Handle Delete Employee by employeeId
-    const handleDeleteEmployee = (employeeId) => {
+  const handleDeleteEmployee = (employeeId) => {
     console.log("Deleting employee with ID:", employeeId); // Confirm selected ID in console
 
     // Filter out the employee to be deleted

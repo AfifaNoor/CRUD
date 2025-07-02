@@ -2,7 +2,6 @@
   import { useNavigate } from 'react-router-dom';
   import { useState, useEffect } from 'react';
   import './DashBoard.css';
-  import AddEmployee from './AddEmployee';
 
 
   const Dashboard = () => {
@@ -26,23 +25,9 @@
       navigate('/add-employee');
     };
 
-    // Handle Delete Employee by employeeId
-    const handleDeleteEmployee = (employeeId) => {
-    console.log("Deleting employee with ID:", employeeId); // Confirm selected ID in console
-
-    // Filter out the employee to be deleted
-    const updatedEmployees = employees.filter(emp => emp.employeeId !== employeeId);
-
-    // Update state and local storage
-    setEmployees(updatedEmployees);
-    localStorage.setItem('employeeList', JSON.stringify(updatedEmployees));
-  };
-
-    const handleViewEmployee=(employee)=>{
-      console.log("employee",employee)
-
+    const handleDeleteEmployee =()=>{
+      console.log("delete",handleDeleteEmployee)
     }
-
 
     return (
       <div className="dashboard-page">
@@ -60,7 +45,6 @@
             {/* Loop through the employee list and display each employee’s info */}
             {employees.map((value, index) => (
               <div key={index} className="employee-card">
-                <p><strong>EmployeeId:</strong> {value.employeeId}</p>
                 <p><strong>Name:</strong> {value.name}</p>
                 <p><strong>Email:</strong> {value.email}</p>
                 <p><strong>Gender:</strong> {value.gender}</p>
@@ -68,8 +52,8 @@
                 <p><strong>Salary:</strong> ₹{value.salary}</p>
                 <p><strong>Joining Date:</strong> {value.joiningDate}</p>
                 <div>
-                <button onClick={()=>{handleViewEmployee(employees)}} > View</button>
-                <button onClick={()=>handleDeleteEmployee(value.employeeId)}> Delete </button>
+                <button > View</button>
+                <button> Delete </button>
               
               </div>
               </div>
